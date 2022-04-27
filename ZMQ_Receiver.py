@@ -5,7 +5,6 @@ import cv2
 from multiprocessing import Process
 context = zmq.Context()
 
-
 def receiver_1():
     print("client started")
     socket = context.socket(zmq.PULL)
@@ -44,7 +43,6 @@ def receiver_2():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cv2.destroyAllWindows()
-
 
 Process(target=receiver_1).start()
 Process(target=receiver_2).start()
