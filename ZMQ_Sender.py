@@ -4,7 +4,6 @@ import zmq
 import cv2
 import pafy
 import youtube_dl
-
 from multiprocessing import Process
 context = zmq.Context()
 
